@@ -4,4 +4,4 @@ name:
    last: Zhang
 email: hanz@cs.cmu.edu
 leaderboard: hanz
-languages: [chn,eng]
+languages: [chi,eng]
