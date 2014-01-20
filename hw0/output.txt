@@ -3,5 +3,5 @@ name:
    first: Han
    last: Zhang
 email: hanz@cs.cmu.edu
-leaderboard: hanz
+leaderboard: LBJ
 languages: [chi,eng]
