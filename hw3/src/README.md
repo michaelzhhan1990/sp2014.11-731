@@ -1,0 +1,1 @@
+use lagrangian relaxation to do exact decoding. It's not fast enough. There may be some bugs and only half of the sentences converged after 60 times iteration.  However, the sentences which converged did improve a lot! 
