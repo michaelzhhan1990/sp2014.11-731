@@ -1,1 +1,1 @@
-use lagrangian relaxation to do exact decoding. My implementation is not fast enough. There may be some bugs and only half of the sentences converged after 60 times iteration.  However, the sentences which converged did improve a lot! 
+Use lagrangian relaxation to do exact decoding. Somehow it's not as fast as decribed in the paper. Only half of the sentences converged after 60 iterations.  However, the sentences which converged did improve a lot.  
