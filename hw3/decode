@@ -40,8 +40,15 @@ for f in input_sents:
                     for phrase in tm[f[i:j]]:
                         logprob = h.logprob + phrase.logprob
                         lm_state = h.lm_state
+
+
+                        if lm_state==('<s>','the'):
+                            print
+
                         for word in phrase.english.split():
+                            #print lm_state
                             (lm_state, word_logprob) = lm.score(lm_state, word)
+                            #print lm_state
                             logprob += word_logprob
                         logprob += lm.end(lm_state) if j == len(f) else 0.0
                         new_hypothesis = hypothesis(logprob, lm_state, h, phrase)
@@ -50,6 +57,10 @@ for f in input_sents:
 
     # find best translation by looking at the best scoring hypothesis
     # on the last stack
+    print stacks[3]#[('army','turkish')]
+    print stacks[2]#[('army',)]
+    print stacks[22]
+    break
     winner = max(stacks[-1].itervalues(), key=lambda h: h.logprob)
     def extract_english_recursive(h):
         return '' if h.predecessor is None else '%s%s ' % (extract_english_recursive(h.predecessor), h.phrase.english)
